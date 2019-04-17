@@ -20,4 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::group(['prefix' => '/v1', 'as' => 'api.'], function ()
 {
     Route::apiResource('shops', 'ShopsController');
+    Route::apiResource('products', 'ProductsController');
+    Route::apiResource('feeds', 'FeedsController');
+    Route::apiResource('channels', 'ChannelsController');
 });

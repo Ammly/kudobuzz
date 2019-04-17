@@ -39,9 +39,9 @@ class ProductsController extends Controller
              'shop_id' => 'required',
              'name' => 'required',
              'title' => 'required',
-             'brand' => 'required'
-             'sales_price' => 'required'
-             'description' => 'required'
+             'brand' => 'required',
+             'sales_price' => 'required',
+             'description' => 'required',
              'quantity' => 'required|int'
         ]);
 

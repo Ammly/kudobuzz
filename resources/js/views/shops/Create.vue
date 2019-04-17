@@ -4,14 +4,14 @@
         <!--Title-->
         <div class="font-sans">
 
-           <h1 class="font-sans break-normal text-black pt-6 pb-2 text-xl">Shops</h1>
+           <h1 class="font-sans break-normal text-black pt-6 pb-2 text-xl">Shops Create</h1>
 
            <hr class="border-b border-grey-light mb-4">
 
            <router-link
                 :to="{ name: 'shops.index' }"
 
-                class="bg-transparent hover:bg-purple text-purple-dark font-semibold hover:text-white mt-4 mb-4 py-2 px-4 border border-purple hover:border-transparent rounded"
+                class="bg-transparent hover:bg-purple text-purple-dark font-semibold hover:text-white mt-4 mb-4 py-2 px-4 border border-purple hover:border-transparent rounded no-underline"
                 >
                 < All Shops
             </router-link>

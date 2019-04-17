@@ -44,7 +44,7 @@ class FeedsController extends Controller
         Feed::create([
              'shop_id' => $request->shop_id,
              'product_id' => $request->product_id,
-             'channel_id' => $request->channel
+             'channel_id' => $request->channel_id
         ]);
 
         return response()

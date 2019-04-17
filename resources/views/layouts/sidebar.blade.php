@@ -30,6 +30,12 @@
                 </a>
             </router-link>
 
+             <router-link tag="li" to="/channels" class="py-2 md:my-0 hover:bg-purple-lightest lg:hover:bg-transparent">
+                <a class="block pl-4 align-middle text-grey-darker no-underline hover:text-purple">
+                    <span class="pb-1 md:pb-0 text-sm text-black font-bold">Channels</span>
+                </a>
+            </router-link>
+
             <router-link tag="li" to="/feeds" class="py-2 md:my-0 hover:bg-purple-lightest lg:hover:bg-transparent">
                 <a class="block pl-4 align-middle text-grey-darker no-underline hover:text-purple">
                     <span class="pb-1 md:pb-0 text-sm text-black font-bold">Feeds</span>

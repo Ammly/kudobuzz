@@ -11,7 +11,7 @@
            <router-link
                 :to="{ name: 'shops.create' }"
 
-                class="bg-transparent hover:bg-purple text-purple-dark font-semibold hover:text-white mt-4 mb-4 py-2 px-4 border border-purple hover:border-transparent rounded"
+                class="bg-transparent hover:bg-purple text-purple-dark font-semibold hover:text-white mt-4 mb-4 py-2 px-4 border border-purple hover:border-transparent rounded no-underline"
                 >
                 New Shop
             </router-link>
@@ -19,17 +19,22 @@
         </div>
 
         <!-- table -->
-        <table class="table-auto mt-4">
+        <table class="text-left m-4" style="border-collapse: collapse;">
             <thead>
-                <th>Store Name</th>
-                <th>Store URL</th>
-                <th>Currency</th>
+                <th class="py-4 px-6 bg-purple font-medium uppercase text-sm text-white border-b border-purple-light">Store Name</th>
+                <th class="py-4 px-6 bg-purple font-medium uppercase text-sm text-white border-b border-purple-light">Store URL</th>
+                <th class="py-4 px-6 bg-purple font-medium uppercase text-sm text-white border-b border-purple-light">Currency</th>
             </thead>
             <tbody>
-                <tr v-for="shop in shops">
-                    <td>{{ shop.store_name }}</td>
-                    <td>{{ shop.store_url }}</td>
-                    <td>{{ shop.currency }}</td>
+                <tr class="hover:bg-purple-lightest" v-if="shops.length" v-for="shop in shops">
+                    <td class="py-4 px-6 border-b border-purple-light">{{ shop.store_name }}</td>
+                    <td class="py-4 px-6 border-b border-purple-light">{{ shop.store_url }}</td>
+                    <td class="py-4 px-6 border-b border-purple-light">{{ shop.currency }}</td>
+                </tr>
+                <tr class="hover:bg-purple-lightest" v-else>
+
+                    <td colspan="6" class="py-4 px-6 border-b border-purple-light">No Shops yet.</td>
+
                 </tr>
             </tbody>
         </table>

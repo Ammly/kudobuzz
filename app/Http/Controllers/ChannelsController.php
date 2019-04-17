@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Channel;
 use Illuminate\Http\Request;
 
-class ChannelController extends Controller
+class ChannelsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -39,14 +39,14 @@ class ChannelController extends Controller
              'name' => 'required|unique:channels'
         ]);
 
-        Feed::create([
+        Channel::create([
              'name' => $request->name
         ]);
 
         return response()
              ->json([
                  'status' => 'success',
-                 'message' => 'Feed created successfully'
+                 'message' => 'Channel created successfully'
              ]);
     }
 
