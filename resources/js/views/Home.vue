@@ -4,7 +4,7 @@
         <!--Title-->
         <div class="font-sans">
 
-           <h1 class="font-sans break-normal text-black pt-6 pb-2 text-xl">Help page title</h1>
+           <h1 class="font-sans break-normal text-black pt-6 pb-2 text-xl">Dashboard</h1>
 
            <hr class="border-b border-grey-light">
 

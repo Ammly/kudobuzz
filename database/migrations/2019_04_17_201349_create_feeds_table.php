@@ -15,9 +15,9 @@ class CreateFeedsTable extends Migration
     {
         Schema::create('feeds', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('shop_id')->unsigned();
-            $table->string('product_id');
-            $table->string('channel_id');
+            $table->integer('shop_id')->unsigned()->nullable();
+            $table->integer('product_id')->unsigned()->nullable();
+            $table->integer('channel_id')->unsigned()->nullable();
             $table->timestamps();
 
             $table->foreign('shop_id')->references('id')->on('shops')->onDelete('cascade');
