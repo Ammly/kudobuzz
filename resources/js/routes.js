@@ -34,5 +34,5 @@ let routes = [
 
 export default new VueRouter({
     routes,
-    linkActiveClass: 'border-l-4 border-transparent lg:border-purple lg:hover:border-purple'
+    linkActiveClass: 'border-l-4 border-transparent lg:bg-grey-lighter lg:hover:bg-grey-lighter lg:border-purple lg:hover:border-purple'
 });

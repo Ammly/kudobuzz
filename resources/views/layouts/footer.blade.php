@@ -1,4 +1,4 @@
-<footer class="bg-white border-t border-grey-light mt-12 shadow">
+<footer class="bg-white border-t border-grey-light mt-24 shadow pin-b">
    <div class="container mx-auto flex py-8">
       <div class="w-full mx-auto flex flex-wrap">
          <div class="flex w-full lg:w-1/2 ">
@@ -14,7 +14,7 @@
                <h3 class="font-bold text-black">Social</h3>
                <ul class="list-reset items-center text-sm pt-3">
                   <li>
-                     <a class="inline-block text-grey-dark no-underline hover:text-black hover:text-underline py-1" href="#">Github</a>
+                     <a class="inline-block text-grey-dark no-underline hover:text-black hover:text-underline py-1" href="https://github.com/Ammly/kudobuzz" target="_blank">Github</a>
                   </li>
                </ul>
             </div>

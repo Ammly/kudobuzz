@@ -11,7 +11,8 @@
             <!-- cards -->
 
             <div class="flex flex-wrap">
-                <div class="bg-purple-light flex-1 m-4 rounded overflow-hidden shadow-lg">
+
+                <router-link :to="{ name: 'shops.index' }" class="bg-purple-light flex-1 m-4 rounded overflow-hidden shadow hover:shadow-lg no-underline">
 
                     <div class="text-center px-6 py-4">
 
@@ -21,9 +22,9 @@
 
                     </div>
 
-                </div>
+                </router-link>
 
-                <div class="bg-purple-light flex-1 m-4 rounded overflow-hidden shadow-lg">
+                <router-link :to="{ name: 'products.index' }" class="bg-purple-light flex-1 m-4 rounded overflow-hidden shadow hover:shadow-lg no-underline">
 
                     <div class="text-center px-6 py-4">
 
@@ -33,9 +34,9 @@
 
                     </div>
 
-                </div>
+                </router-link>
 
-                <div class="bg-purple-light flex-1 m-4 rounded overflow-hidden shadow-lg">
+                <router-link :to="{ name: 'channels.index' }" class="bg-purple-light flex-1 m-4 rounded overflow-hidden shadow hover:shadow-lg no-underline">
 
                     <div class="text-center px-6 py-4">
 
@@ -45,9 +46,9 @@
 
                     </div>
 
-                </div>
+                </router-link>
 
-                <div class="bg-purple-light flex-1 m-4 rounded overflow-hidden shadow-lg">
+                <router-link :to="{ name: 'feeds.index' }" class="bg-purple-light flex-1 m-4 rounded overflow-hidden shadow hover:shadow-lg no-underline">
 
                     <div class="text-center px-6 py-4">
 
@@ -57,7 +58,7 @@
 
                     </div>
 
-                </div>
+                </router-link>
             </div>
 
             <!-- End: cards -->

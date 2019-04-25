@@ -1833,6 +1833,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -3158,91 +3159,100 @@ var render = function() {
         _vm._v(" "),
         _c("hr", { staticClass: "border-b border-grey-light" }),
         _vm._v(" "),
-        _c("div", { staticClass: "flex flex-wrap" }, [
-          _c(
-            "div",
-            {
-              staticClass:
-                "bg-purple-light flex-1 m-4 rounded overflow-hidden shadow-lg"
-            },
-            [
-              _c("div", { staticClass: "text-center px-6 py-4" }, [
-                _c(
-                  "div",
-                  { staticClass: "font-bold text-white text-xl mb-2" },
-                  [_vm._v("Shops")]
-                ),
-                _vm._v(" "),
-                _c("p", { staticClass: "text-grey-lighter text-base" }, [
-                  _vm._v(_vm._s(_vm.statistics.shops))
+        _c(
+          "div",
+          { staticClass: "flex flex-wrap" },
+          [
+            _c(
+              "router-link",
+              {
+                staticClass:
+                  "bg-purple-light flex-1 m-4 rounded overflow-hidden shadow hover:shadow-lg no-underline",
+                attrs: { to: { name: "shops.index" } }
+              },
+              [
+                _c("div", { staticClass: "text-center px-6 py-4" }, [
+                  _c(
+                    "div",
+                    { staticClass: "font-bold text-white text-xl mb-2" },
+                    [_vm._v("Shops")]
+                  ),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "text-grey-lighter text-base" }, [
+                    _vm._v(_vm._s(_vm.statistics.shops))
+                  ])
                 ])
-              ])
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass:
-                "bg-purple-light flex-1 m-4 rounded overflow-hidden shadow-lg"
-            },
-            [
-              _c("div", { staticClass: "text-center px-6 py-4" }, [
-                _c(
-                  "div",
-                  { staticClass: "font-bold text-white text-xl mb-2" },
-                  [_vm._v("Products")]
-                ),
-                _vm._v(" "),
-                _c("p", { staticClass: "text-grey-lighter text-base" }, [
-                  _vm._v(_vm._s(_vm.statistics.products))
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "router-link",
+              {
+                staticClass:
+                  "bg-purple-light flex-1 m-4 rounded overflow-hidden shadow hover:shadow-lg no-underline",
+                attrs: { to: { name: "products.index" } }
+              },
+              [
+                _c("div", { staticClass: "text-center px-6 py-4" }, [
+                  _c(
+                    "div",
+                    { staticClass: "font-bold text-white text-xl mb-2" },
+                    [_vm._v("Products")]
+                  ),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "text-grey-lighter text-base" }, [
+                    _vm._v(_vm._s(_vm.statistics.products))
+                  ])
                 ])
-              ])
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass:
-                "bg-purple-light flex-1 m-4 rounded overflow-hidden shadow-lg"
-            },
-            [
-              _c("div", { staticClass: "text-center px-6 py-4" }, [
-                _c(
-                  "div",
-                  { staticClass: "font-bold text-white text-xl mb-2" },
-                  [_vm._v("Channels")]
-                ),
-                _vm._v(" "),
-                _c("p", { staticClass: "text-grey-lighter text-base" }, [
-                  _vm._v(_vm._s(_vm.statistics.channels))
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "router-link",
+              {
+                staticClass:
+                  "bg-purple-light flex-1 m-4 rounded overflow-hidden shadow hover:shadow-lg no-underline",
+                attrs: { to: { name: "channels.index" } }
+              },
+              [
+                _c("div", { staticClass: "text-center px-6 py-4" }, [
+                  _c(
+                    "div",
+                    { staticClass: "font-bold text-white text-xl mb-2" },
+                    [_vm._v("Channels")]
+                  ),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "text-grey-lighter text-base" }, [
+                    _vm._v(_vm._s(_vm.statistics.channels))
+                  ])
                 ])
-              ])
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass:
-                "bg-purple-light flex-1 m-4 rounded overflow-hidden shadow-lg"
-            },
-            [
-              _c("div", { staticClass: "text-center px-6 py-4" }, [
-                _c(
-                  "div",
-                  { staticClass: "font-bold text-white text-xl mb-2" },
-                  [_vm._v("Feeds")]
-                ),
-                _vm._v(" "),
-                _c("p", { staticClass: "text-grey-lighter text-base" }, [
-                  _vm._v(_vm._s(_vm.statistics.feeds))
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "router-link",
+              {
+                staticClass:
+                  "bg-purple-light flex-1 m-4 rounded overflow-hidden shadow hover:shadow-lg no-underline",
+                attrs: { to: { name: "feeds.index" } }
+              },
+              [
+                _c("div", { staticClass: "text-center px-6 py-4" }, [
+                  _c(
+                    "div",
+                    { staticClass: "font-bold text-white text-xl mb-2" },
+                    [_vm._v("Feeds")]
+                  ),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "text-grey-lighter text-base" }, [
+                    _vm._v(_vm._s(_vm.statistics.feeds))
+                  ])
                 ])
-              ])
-            ]
-          )
-        ])
+              ]
+            )
+          ],
+          1
+        )
       ])
     ]
   )
@@ -19954,7 +19964,7 @@ var routes = [{
 }];
 /* harmony default export */ __webpack_exports__["default"] = (new vue_router__WEBPACK_IMPORTED_MODULE_0__["default"]({
   routes: routes,
-  linkActiveClass: 'border-l-4 border-transparent lg:border-purple lg:hover:border-purple'
+  linkActiveClass: 'border-l-4 border-transparent lg:bg-grey-lighter lg:hover:bg-grey-lighter lg:border-purple lg:hover:border-purple'
 }));
 
 /***/ }),
