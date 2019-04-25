@@ -14,7 +14,7 @@ class FeedsController extends Controller
      */
     public function index()
     {
-        return Feed::all();
+        return Feed::with(['shop', 'product', 'channel'])->get();
     }
 
     /**

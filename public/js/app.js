@@ -3096,7 +3096,7 @@ var staticRenderFns = [
             {
               staticClass: "font-sans break-normal text-black pt-6 pb-2 text-xl"
             },
-            [_vm._v("Help page title")]
+            [_vm._v("Dashboard")]
           ),
           _vm._v(" "),
           _c("hr", { staticClass: "border-b border-grey-light" })
@@ -3751,19 +3751,19 @@ var render = function() {
                     _c(
                       "td",
                       { staticClass: "py-4 px-6 border-b border-purple-light" },
-                      [_vm._v(_vm._s(feed.shop_id))]
+                      [_vm._v(_vm._s(feed.shop.store_name))]
                     ),
                     _vm._v(" "),
                     _c(
                       "td",
                       { staticClass: "py-4 px-6 border-b border-purple-light" },
-                      [_vm._v(_vm._s(feed.product_id))]
+                      [_vm._v(_vm._s(feed.product.name))]
                     ),
                     _vm._v(" "),
                     _c(
                       "td",
                       { staticClass: "py-4 px-6 border-b border-purple-light" },
-                      [_vm._v(_vm._s(feed.channel_id))]
+                      [_vm._v(_vm._s(feed.channel.name))]
                     ),
                     _vm._v(" "),
                     _c(
@@ -4379,7 +4379,7 @@ var render = function() {
                     _c(
                       "td",
                       { staticClass: "py-4 px-6 border-b border-purple-light" },
-                      [_vm._v(_vm._s(product.shop_id))]
+                      [_vm._v(_vm._s(product.shop.store_name))]
                     ),
                     _vm._v(" "),
                     _c(

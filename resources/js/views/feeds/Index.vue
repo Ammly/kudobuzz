@@ -28,9 +28,9 @@
             </thead>
             <tbody>
                 <tr class="hover:bg-purple-lightest" v-if="feeds.length" v-for="feed in feeds">
-                    <td class="py-4 px-6 border-b border-purple-light">{{ feed.shop_id }}</td>
-                    <td class="py-4 px-6 border-b border-purple-light">{{ feed.product_id }}</td>
-                    <td class="py-4 px-6 border-b border-purple-light">{{ feed.channel_id }}</td>
+                    <td class="py-4 px-6 border-b border-purple-light">{{ feed.shop.store_name }}</td>
+                    <td class="py-4 px-6 border-b border-purple-light">{{ feed.product.name }}</td>
+                    <td class="py-4 px-6 border-b border-purple-light">{{ feed.channel.name }}</td>
                     <td class="py-4 px-6 border-b border-purple-light">
                         <router-link
                              :to="{ name: 'feeds.download' }"

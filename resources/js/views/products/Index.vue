@@ -31,7 +31,7 @@
             </thead>
             <tbody>
                 <tr class="hover:bg-purple-lightest" v-if="products.length" v-for="product in products">
-                    <td class="py-4 px-6 border-b border-purple-light">{{ product.shop_id }}</td>
+                    <td class="py-4 px-6 border-b border-purple-light">{{ product.shop.store_name }}</td>
                     <td class="py-4 px-6 border-b border-purple-light">{{ product.name }}</td>
                     <td class="py-4 px-6 border-b border-purple-light">{{ product.title }}</td>
                     <td class="py-4 px-6 border-b border-purple-light">{{ product.brand }}</td>

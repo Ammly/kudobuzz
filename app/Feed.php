@@ -10,16 +10,19 @@ class Feed extends Model
 
     public function shop()
     {
-        return $this->belongsTo(Shop::class);
+        return $this->belongsTo(Shop::class)
+            ->select(['id', 'store_name']);
     }
 
     public function product()
     {
-        return $this->belongsTo(Product::class);
+        return $this->belongsTo(Product::class)
+            ->select(['id', 'name']);
     }
 
     public function channel()
     {
-        return $this->belongsTo(Channel::class);
+        return $this->belongsTo(Channel::class)
+            ->select(['id', 'name']);
     }
 }
