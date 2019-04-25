@@ -1779,9 +1779,73 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  mounted: function mounted() {
-    console.log('Component mounted.');
+  data: function data() {
+    return {
+      statistics: []
+    };
+  },
+  created: function created() {
+    var _this = this;
+
+    axios.get('/api/v1/home').then(function (_ref) {
+      var data = _ref.data;
+      return _this.statistics = data;
+    });
   }
 });
 
@@ -3076,35 +3140,114 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "w-full lg:w-4/5 p-8 mt-6 mb-4 lg:mt-0 text-black leading-normal bg-white border border-grey-light border-rounded"
-      },
-      [
-        _c("div", { staticClass: "font-sans" }, [
+  return _c(
+    "div",
+    {
+      staticClass:
+        "w-full lg:w-4/5 p-8 mt-6 mb-4 lg:mt-0 text-black leading-normal bg-white border border-grey-light border-rounded"
+    },
+    [
+      _c("div", { staticClass: "font-sans" }, [
+        _c(
+          "h1",
+          {
+            staticClass: "font-sans break-normal text-black pt-6 pb-2 text-xl"
+          },
+          [_vm._v("Dashboard")]
+        ),
+        _vm._v(" "),
+        _c("hr", { staticClass: "border-b border-grey-light" }),
+        _vm._v(" "),
+        _c("div", { staticClass: "flex flex-wrap" }, [
           _c(
-            "h1",
+            "div",
             {
-              staticClass: "font-sans break-normal text-black pt-6 pb-2 text-xl"
+              staticClass:
+                "bg-purple-light flex-1 m-4 rounded overflow-hidden shadow-lg"
             },
-            [_vm._v("Dashboard")]
+            [
+              _c("div", { staticClass: "text-center px-6 py-4" }, [
+                _c(
+                  "div",
+                  { staticClass: "font-bold text-white text-xl mb-2" },
+                  [_vm._v("Shops")]
+                ),
+                _vm._v(" "),
+                _c("p", { staticClass: "text-grey-lighter text-base" }, [
+                  _vm._v(_vm._s(_vm.statistics.shops))
+                ])
+              ])
+            ]
           ),
           _vm._v(" "),
-          _c("hr", { staticClass: "border-b border-grey-light" })
+          _c(
+            "div",
+            {
+              staticClass:
+                "bg-purple-light flex-1 m-4 rounded overflow-hidden shadow-lg"
+            },
+            [
+              _c("div", { staticClass: "text-center px-6 py-4" }, [
+                _c(
+                  "div",
+                  { staticClass: "font-bold text-white text-xl mb-2" },
+                  [_vm._v("Products")]
+                ),
+                _vm._v(" "),
+                _c("p", { staticClass: "text-grey-lighter text-base" }, [
+                  _vm._v(_vm._s(_vm.statistics.products))
+                ])
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "bg-purple-light flex-1 m-4 rounded overflow-hidden shadow-lg"
+            },
+            [
+              _c("div", { staticClass: "text-center px-6 py-4" }, [
+                _c(
+                  "div",
+                  { staticClass: "font-bold text-white text-xl mb-2" },
+                  [_vm._v("Channels")]
+                ),
+                _vm._v(" "),
+                _c("p", { staticClass: "text-grey-lighter text-base" }, [
+                  _vm._v(_vm._s(_vm.statistics.channels))
+                ])
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "bg-purple-light flex-1 m-4 rounded overflow-hidden shadow-lg"
+            },
+            [
+              _c("div", { staticClass: "text-center px-6 py-4" }, [
+                _c(
+                  "div",
+                  { staticClass: "font-bold text-white text-xl mb-2" },
+                  [_vm._v("Feeds")]
+                ),
+                _vm._v(" "),
+                _c("p", { staticClass: "text-grey-lighter text-base" }, [
+                  _vm._v(_vm._s(_vm.statistics.feeds))
+                ])
+              ])
+            ]
+          )
         ])
-      ]
-    )
-  }
-]
+      ])
+    ]
+  )
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
