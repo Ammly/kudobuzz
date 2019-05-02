@@ -18,6 +18,25 @@ class FeedsController extends Controller
     }
 
     /**
+     * Download feeds csv.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function download()
+    {
+        $feeds = Feed::with(['shop', 'product', 'channel'])->get();
+
+        $csvExporter = new \Laracsv\Export();
+
+        return $csvExporter
+                ->build($feeds, [
+                    'shop.store_name' => 'Shop Name',
+                    'product.name' => 'Product Name',
+                    'channel.name' => 'Channel Name'
+                ])->download('feeds.csv');
+    }
+
+    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response

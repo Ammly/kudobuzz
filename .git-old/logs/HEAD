@@ -1,7 +1,0 @@
-0000000000000000000000000000000000000000 8ebd81f1b7956ca5dbac44bb875a47300b715519 Ammly <ammlyf@gmail.com> 1555534569 +0300	commit (initial): Kudobuzz challenge
-8ebd81f1b7956ca5dbac44bb875a47300b715519 959edecb70fc5144008a70de59f0ac30ec2fc4c8 Ammly <ammlyf@gmail.com> 1555535251 +0300	commit: Add README
-959edecb70fc5144008a70de59f0ac30ec2fc4c8 3d66ec300956acdd3e999db3469f84d5bdd9d06a Ammly <ammlyf@gmail.com> 1555545066 +0300	commit: Add create and read functionality
-3d66ec300956acdd3e999db3469f84d5bdd9d06a 27e225b06666be24cf426fd0990232ead3ca6329 Ammly <ammlyf@gmail.com> 1556190468 +0300	commit: Fix migrations.
-27e225b06666be24cf426fd0990232ead3ca6329 53ab86683a763d377af57405c95bbb3426b8281b Ammly <ammlyf@gmail.com> 1556194178 +0300	commit: Add database seeds
-53ab86683a763d377af57405c95bbb3426b8281b 3f0231ee1dced2841da2ab95675c32f998ea4c51 Ammly <ammlyf@gmail.com> 1556196526 +0300	commit: Add statistics cards on the dashbord
-3f0231ee1dced2841da2ab95675c32f998ea4c51 5f1cd57db4e0af74efef994f3a01b8335c8ec4cf Ammly <ammlyf@gmail.com> 1556210562 +0300	pull origin master: Merge made by the 'recursive' strategy.

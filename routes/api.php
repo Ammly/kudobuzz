@@ -22,6 +22,7 @@ Route::group(['prefix' => '/v1', 'as' => 'api.'], function ()
     Route::apiResource('home', 'HomeController');
     Route::apiResource('shops', 'ShopsController');
     Route::apiResource('products', 'ProductsController');
+    Route::get('feeds/download', 'FeedsController@download');
     Route::apiResource('feeds', 'FeedsController');
     Route::apiResource('channels', 'ChannelsController');
 });

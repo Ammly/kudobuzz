@@ -24,23 +24,12 @@
                 <th class="py-4 px-6 bg-purple font-medium uppercase text-sm text-white border-b border-purple-light">Shop Name</th>
                 <th class="py-4 px-6 bg-purple font-medium uppercase text-sm text-white border-b border-purple-light">Product Name</th>
                 <th class="py-4 px-6 bg-purple font-medium uppercase text-sm text-white border-b border-purple-light">Channel Name</th>
-                <th class="py-4 px-6 bg-purple font-medium uppercase text-sm text-white border-b border-purple-light">Action</th>
             </thead>
             <tbody>
                 <tr class="hover:bg-purple-lightest" v-if="feeds.length" v-for="feed in feeds">
                     <td class="py-4 px-6 border-b border-purple-light">{{ feed.shop.store_name }}</td>
                     <td class="py-4 px-6 border-b border-purple-light">{{ feed.product.name }}</td>
                     <td class="py-4 px-6 border-b border-purple-light">{{ feed.channel.name }}</td>
-                    <td class="py-4 px-6 border-b border-purple-light">
-                        <router-link
-                             :to="{ name: 'feeds.download' }"
-
-                             class="bg-transparent hover:bg-purple text-purple-dark font-thin hover:text-white mt-4 mb-4 py-2 px-4 border border-purple hover:border-transparent rounded no-underline"
-                             >
-                             <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
-                            <span>Download</span>
-                         </router-link>
-                    </td>
                 </tr>
                 <tr class="hover:bg-purple-lightest" v-else>
 
@@ -50,11 +39,25 @@
             </tbody>
         </table>
 
+        <div class="font-sans">
+
+            <hr class="border-b border-grey-light mb-4">
+
+            <button class="bg-transparent hover:bg-purple text-purple-dark font-thin hover:text-white mt-4 mb-4 py-2 px-4 border border-purple hover:border-transparent rounded no-underline"
+                v-on:click="download"
+                 >
+                 <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
+                <span>Download</span>
+            </button>
+        </div>
+
      </div>
 
 </template>
 
 <script>
+    import FileSaver from 'file-saver';
+
     export default {
         data() {
             return {
@@ -66,6 +69,23 @@
 
            axios.get('/api/v1/feeds')
                 .then(({data}) => this.feeds = data);
+        },
+        methods: {
+            download() {
+                axios({
+                  url: '/api/v1/feeds/download',
+                  method: 'GET',
+                  responseType: 'blob', // important
+                })
+                .then((response) => {
+                  const url = window.URL.createObjectURL(new Blob([response.data]));
+                  const link = document.createElement('a');
+                  link.href = url;
+                  link.setAttribute('download', 'feeds.csv');
+                  document.body.appendChild(link);
+                  link.click();
+                });
+            }
         }
     }
 </script>
