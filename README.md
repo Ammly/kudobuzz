@@ -1,6 +1,8 @@
 
 # Kudobuzz Interview Challenge
 
+[Heroku Link](https://kudobuzz.herokuapp.com)
+
 ## Instructions
 - clone this repository
 - run `composer install` and `npm install`
