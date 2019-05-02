@@ -12,9 +12,9 @@ class ChannelsTableSeeder extends Seeder
     public function run()
     {
         $channels = [
-            ['name' => 'Google'],
-            ['name' => 'Amazon'],
-            ['name' => 'Shopify'],
+            ['id' =>1, 'name' => 'Google'],
+            ['id' =>2, 'name' => 'Amazon'],
+            ['id' =>3, 'name' => 'Shopify'],
         ];
 
         foreach ($channels as $channel) {

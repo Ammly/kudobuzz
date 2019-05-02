@@ -13,6 +13,7 @@ class ProductsTableSeeder extends Seeder
     {
         $products = [
             [
+                'id' => 1,
                 'shop_id' => 1,
                 'name' => 'Macbook Pro',
                 'title' => 'Macbook Pro 15',
@@ -22,6 +23,7 @@ class ProductsTableSeeder extends Seeder
                 'quantity' => 100,
             ],
             [
+                'id' => 2,
                 'shop_id' => 2,
                 'name' => 'Macbook Pro',
                 'title' => 'Macbook Pro 14',
@@ -31,6 +33,7 @@ class ProductsTableSeeder extends Seeder
                 'quantity' => 100,
             ],
             [
+                'id' => 3,
                 'shop_id' => 3,
                 'name' => 'Iphone X',
                 'title' => 'Iphone X',
@@ -40,6 +43,7 @@ class ProductsTableSeeder extends Seeder
                 'quantity' => 100,
             ],
             [
+                'id' => 4,
                 'shop_id' => 4,
                 'name' => 'Iphone XL',
                 'title' => 'Iphone XL',
@@ -49,6 +53,7 @@ class ProductsTableSeeder extends Seeder
                 'quantity' => 100,
             ],
             [
+                'id' => 5,
                 'shop_id' => 5,
                 'name' => 'Iphone 8',
                 'title' => 'Iphone 8',
