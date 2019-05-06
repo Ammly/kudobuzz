@@ -1834,6 +1834,46 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2139,8 +2179,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var file_saver__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! file-saver */ "./node_modules/file-saver/dist/FileSaver.min.js");
-/* harmony import */ var file_saver__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(file_saver__WEBPACK_IMPORTED_MODULE_0__);
 //
 //
 //
@@ -2198,7 +2236,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2550,25 +2587,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      shop: {
+      form: new Form({
         store_name: '',
         store_url: '',
         currency: ''
-      },
-      errors: {}
+      })
     };
   },
   methods: {
     onSubmit: function onSubmit() {
-      var _this = this;
-
-      axios.post('/api/v1/shops', this.shop).then(function (response) {
-        _this.$router.push({
-          name: 'shops.index'
-        });
-      })["catch"](function (errors) {
-        return _this.errors = errors.response.data.errors;
-      });
+      this.form.post('/api/v1/shops').then(function (status) {
+        return alert('All done');
+      }); // axios.post('/api/v1/shops', this.shop)
+      //      .then((response) => {this.$router.push({name: 'shops.index'})})
+      //      .catch(errors => this.errors = errors.response.data.errors);
     }
   }
 });
@@ -2644,23 +2676,6 @@ __webpack_require__.r(__webpack_exports__);
     });
   }
 });
-
-/***/ }),
-
-/***/ "./node_modules/file-saver/dist/FileSaver.min.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/file-saver/dist/FileSaver.min.js ***!
-  \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(global) {var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function(a,b){if(true)!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_FACTORY__ = (b),
-				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
-				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));else {}})(this,function(){"use strict";function b(a,b){return"undefined"==typeof b?b={autoBom:!1}:"object"!=typeof b&&(console.warn("Deprecated: Expected third argument to be a object"),b={autoBom:!b}),b.autoBom&&/^\s*(?:text\/\S*|application\/xml|\S*\/\S*\+xml)\s*;.*charset\s*=\s*utf-8/i.test(a.type)?new Blob(["\uFEFF",a],{type:a.type}):a}function c(b,c,d){var e=new XMLHttpRequest;e.open("GET",b),e.responseType="blob",e.onload=function(){a(e.response,c,d)},e.onerror=function(){console.error("could not download file")},e.send()}function d(a){var b=new XMLHttpRequest;return b.open("HEAD",a,!1),b.send(),200<=b.status&&299>=b.status}function e(a){try{a.dispatchEvent(new MouseEvent("click"))}catch(c){var b=document.createEvent("MouseEvents");b.initMouseEvent("click",!0,!0,window,0,0,0,80,20,!1,!1,!1,!1,0,null),a.dispatchEvent(b)}}var f="object"==typeof window&&window.window===window?window:"object"==typeof self&&self.self===self?self:"object"==typeof global&&global.global===global?global:void 0,a=f.saveAs||("object"!=typeof window||window!==f?function(){}:"download"in HTMLAnchorElement.prototype?function(b,g,h){var i=f.URL||f.webkitURL,j=document.createElement("a");g=g||b.name||"download",j.download=g,j.rel="noopener","string"==typeof b?(j.href=b,j.origin===location.origin?e(j):d(j.href)?c(b,g,h):e(j,j.target="_blank")):(j.href=i.createObjectURL(b),setTimeout(function(){i.revokeObjectURL(j.href)},4E4),setTimeout(function(){e(j)},0))}:"msSaveOrOpenBlob"in navigator?function(f,g,h){if(g=g||f.name||"download","string"!=typeof f)navigator.msSaveOrOpenBlob(b(f,h),g);else if(d(f))c(f,g,h);else{var i=document.createElement("a");i.href=f,i.target="_blank",setTimeout(function(){e(i)})}}:function(a,b,d,e){if(e=e||open("","_blank"),e&&(e.document.title=e.document.body.innerText="downloading..."),"string"==typeof a)return c(a,b,d);var g="application/octet-stream"===a.type,h=/constructor/i.test(f.HTMLElement)||f.safari,i=/CriOS\/[\d]+/.test(navigator.userAgent);if((i||g&&h)&&"object"==typeof FileReader){var j=new FileReader;j.onloadend=function(){var a=j.result;a=i?a:a.replace(/^data:[^;]*;/,"data:attachment/file;"),e?e.location.href=a:location=a,e=null},j.readAsDataURL(a)}else{var k=f.URL||f.webkitURL,l=k.createObjectURL(a);e?e.location=l:location.href=l,e=null,setTimeout(function(){k.revokeObjectURL(l)},4E4)}});f.saveAs=a.saveAs=a, true&&(module.exports=a)});
-
-//# sourceMappingURL=FileSaver.min.js.map
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
 
 /***/ }),
 
@@ -3183,43 +3198,67 @@ var render = function() {
     "div",
     {
       staticClass:
-        "w-full lg:w-4/5 p-8 mt-6 mb-4 lg:mt-0 text-black leading-normal bg-white border border-grey-light border-rounded"
+        "w-full lg:w-4/5 p-8 mt-6 mb-4 lg:mt-0 text-black leading-normal bg-white border border-grey-light border-rounded font-sans"
     },
     [
-      _c("div", { staticClass: "font-sans" }, [
-        _c(
-          "h1",
-          {
-            staticClass: "font-sans break-normal text-black pt-6 pb-2 text-xl"
-          },
-          [_vm._v("Dashboard")]
-        ),
-        _vm._v(" "),
-        _c("hr", { staticClass: "border-b border-grey-light" }),
-        _vm._v(" "),
+      _c(
+        "h1",
+        { staticClass: "font-sans break-normal text-black pt-6 pb-2 text-xl" },
+        [_vm._v("Dashboard")]
+      ),
+      _vm._v(" "),
+      _c("hr", { staticClass: "border-b border-grey-light" }),
+      _vm._v(" "),
+      _c("div", { staticClass: "container my-12 mx-auto px-4 md:px-12" }, [
         _c(
           "div",
-          { staticClass: "flex flex-wrap" },
+          { staticClass: "flex flex-wrap -mx-1 lg:-mx-4" },
           [
             _c(
               "router-link",
               {
                 staticClass:
-                  "bg-purple-light flex-1 m-4 rounded overflow-hidden shadow hover:shadow-lg no-underline",
+                  "my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3 no-underline",
                 attrs: { to: { name: "shops.index" } }
               },
               [
-                _c("div", { staticClass: "text-center px-6 py-4" }, [
-                  _c(
-                    "div",
-                    { staticClass: "font-bold text-white text-xl mb-2" },
-                    [_vm._v("Shops")]
-                  ),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "text-grey-lighter text-base" }, [
-                    _vm._v(_vm._s(_vm.statistics.shops))
-                  ])
-                ])
+                _c(
+                  "article",
+                  {
+                    staticClass:
+                      "bg-purple-light overflow-hidden rounded-lg shadow hover:shadow-lg text-center"
+                  },
+                  [
+                    _c("header", { staticClass: "leading-tight p-2 md:p-4" }, [
+                      _c("h1", { staticClass: "text-lg text-white" }, [
+                        _vm._v(
+                          "\n                            Shops\n                        "
+                        )
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "footer",
+                      {
+                        staticClass:
+                          "justify-between leading-none p-2 md:p-4 text-center"
+                      },
+                      [
+                        _c(
+                          "p",
+                          { staticClass: "ml-2 text-sm text-grey-lighter" },
+                          [
+                            _vm._v(
+                              "\n                            " +
+                                _vm._s(_vm.statistics.shops) +
+                                "\n                        "
+                            )
+                          ]
+                        )
+                      ]
+                    )
+                  ]
+                )
               ]
             ),
             _vm._v(" "),
@@ -3227,21 +3266,47 @@ var render = function() {
               "router-link",
               {
                 staticClass:
-                  "bg-purple-light flex-1 m-4 rounded overflow-hidden shadow hover:shadow-lg no-underline",
+                  "my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3 no-underline",
                 attrs: { to: { name: "products.index" } }
               },
               [
-                _c("div", { staticClass: "text-center px-6 py-4" }, [
-                  _c(
-                    "div",
-                    { staticClass: "font-bold text-white text-xl mb-2" },
-                    [_vm._v("Products")]
-                  ),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "text-grey-lighter text-base" }, [
-                    _vm._v(_vm._s(_vm.statistics.products))
-                  ])
-                ])
+                _c(
+                  "article",
+                  {
+                    staticClass:
+                      "bg-purple-light overflow-hidden rounded-lg shadow hover:shadow-lg text-center"
+                  },
+                  [
+                    _c("header", { staticClass: "leading-tight p-2 md:p-4" }, [
+                      _c("h1", { staticClass: "text-lg text-white" }, [
+                        _vm._v(
+                          "\n                            Products\n                        "
+                        )
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "footer",
+                      {
+                        staticClass:
+                          "justify-between leading-none p-2 md:p-4 text-center"
+                      },
+                      [
+                        _c(
+                          "p",
+                          { staticClass: "ml-2 text-sm text-grey-lighter" },
+                          [
+                            _vm._v(
+                              "\n                            " +
+                                _vm._s(_vm.statistics.products) +
+                                "\n                        "
+                            )
+                          ]
+                        )
+                      ]
+                    )
+                  ]
+                )
               ]
             ),
             _vm._v(" "),
@@ -3249,21 +3314,47 @@ var render = function() {
               "router-link",
               {
                 staticClass:
-                  "bg-purple-light flex-1 m-4 rounded overflow-hidden shadow hover:shadow-lg no-underline",
+                  "my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3 no-underline",
                 attrs: { to: { name: "channels.index" } }
               },
               [
-                _c("div", { staticClass: "text-center px-6 py-4" }, [
-                  _c(
-                    "div",
-                    { staticClass: "font-bold text-white text-xl mb-2" },
-                    [_vm._v("Channels")]
-                  ),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "text-grey-lighter text-base" }, [
-                    _vm._v(_vm._s(_vm.statistics.channels))
-                  ])
-                ])
+                _c(
+                  "article",
+                  {
+                    staticClass:
+                      "bg-purple-light overflow-hidden rounded-lg shadow hover:shadow-lg text-center"
+                  },
+                  [
+                    _c("header", { staticClass: "leading-tight p-2 md:p-4" }, [
+                      _c("h1", { staticClass: "text-lg text-white" }, [
+                        _vm._v(
+                          "\n                            Channels\n                        "
+                        )
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "footer",
+                      {
+                        staticClass:
+                          "justify-between leading-none p-2 md:p-4 text-center"
+                      },
+                      [
+                        _c(
+                          "p",
+                          { staticClass: "ml-2 text-sm text-grey-lighter" },
+                          [
+                            _vm._v(
+                              "\n                            " +
+                                _vm._s(_vm.statistics.channels) +
+                                "\n                        "
+                            )
+                          ]
+                        )
+                      ]
+                    )
+                  ]
+                )
               ]
             ),
             _vm._v(" "),
@@ -3271,21 +3362,47 @@ var render = function() {
               "router-link",
               {
                 staticClass:
-                  "bg-purple-light flex-1 m-4 rounded overflow-hidden shadow hover:shadow-lg no-underline",
+                  "my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3 no-underline",
                 attrs: { to: { name: "feeds.index" } }
               },
               [
-                _c("div", { staticClass: "text-center px-6 py-4" }, [
-                  _c(
-                    "div",
-                    { staticClass: "font-bold text-white text-xl mb-2" },
-                    [_vm._v("Feeds")]
-                  ),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "text-grey-lighter text-base" }, [
-                    _vm._v(_vm._s(_vm.statistics.feeds))
-                  ])
-                ])
+                _c(
+                  "article",
+                  {
+                    staticClass:
+                      "bg-purple-light overflow-hidden rounded-lg shadow hover:shadow-lg text-center"
+                  },
+                  [
+                    _c("header", { staticClass: "leading-tight p-2 md:p-4" }, [
+                      _c("h1", { staticClass: "text-lg text-white" }, [
+                        _vm._v(
+                          "\n                            Feeds\n                        "
+                        )
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "footer",
+                      {
+                        staticClass:
+                          "justify-between leading-none p-2 md:p-4 text-center"
+                      },
+                      [
+                        _c(
+                          "p",
+                          { staticClass: "ml-2 text-sm text-grey-lighter" },
+                          [
+                            _vm._v(
+                              "\n                            " +
+                                _vm._s(_vm.statistics.feeds) +
+                                "\n                        "
+                            )
+                          ]
+                        )
+                      ]
+                    )
+                  ]
+                )
               ]
             )
           ],
@@ -4747,6 +4864,9 @@ var render = function() {
               submit: function($event) {
                 $event.preventDefault()
                 return _vm.onSubmit($event)
+              },
+              keydown: function($event) {
+                return _vm.form.errors.clear()
               }
             }
           },
@@ -4766,8 +4886,8 @@ var render = function() {
                   {
                     name: "model",
                     rawName: "v-model",
-                    value: _vm.shop.store_name,
-                    expression: "shop.store_name"
+                    value: _vm.form.store_name,
+                    expression: "form.store_name"
                   }
                 ],
                 staticClass:
@@ -4777,23 +4897,25 @@ var render = function() {
                   type: "text",
                   placeholder: "Store Name"
                 },
-                domProps: { value: _vm.shop.store_name },
+                domProps: { value: _vm.form.store_name },
                 on: {
                   input: function($event) {
                     if ($event.target.composing) {
                       return
                     }
-                    _vm.$set(_vm.shop, "store_name", $event.target.value)
+                    _vm.$set(_vm.form, "store_name", $event.target.value)
                   }
                 }
               }),
               _vm._v(" "),
-              _vm.errors.store_name
+              _vm.form.errors.has("store_name")
                 ? _c("span", {
                     staticClass:
                       "bg-red-lightest border border-red-light text-red-dark px-2 py-1 rounded relative",
                     attrs: { role: "alert" },
-                    domProps: { textContent: _vm._s(_vm.errors.store_name[0]) }
+                    domProps: {
+                      textContent: _vm._s(_vm.form.errors.get("store_name"))
+                    }
                   })
                 : _vm._e()
             ]),
@@ -4813,8 +4935,8 @@ var render = function() {
                   {
                     name: "model",
                     rawName: "v-model",
-                    value: _vm.shop.store_url,
-                    expression: "shop.store_url"
+                    value: _vm.form.store_url,
+                    expression: "form.store_url"
                   }
                 ],
                 staticClass:
@@ -4824,23 +4946,25 @@ var render = function() {
                   type: "text",
                   placeholder: "Store URL"
                 },
-                domProps: { value: _vm.shop.store_url },
+                domProps: { value: _vm.form.store_url },
                 on: {
                   input: function($event) {
                     if ($event.target.composing) {
                       return
                     }
-                    _vm.$set(_vm.shop, "store_url", $event.target.value)
+                    _vm.$set(_vm.form, "store_url", $event.target.value)
                   }
                 }
               }),
               _vm._v(" "),
-              _vm.errors.store_url
+              _vm.form.errors.has("store_url")
                 ? _c("span", {
                     staticClass:
                       "bg-red-lightest border border-red-light text-red-dark px-2 py-1 rounded relative",
                     attrs: { role: "alert" },
-                    domProps: { textContent: _vm._s(_vm.errors.store_url[0]) }
+                    domProps: {
+                      textContent: _vm._s(_vm.form.errors.get("store_url"))
+                    }
                   })
                 : _vm._e()
             ]),
@@ -4860,8 +4984,8 @@ var render = function() {
                   {
                     name: "model",
                     rawName: "v-model",
-                    value: _vm.shop.currency,
-                    expression: "shop.currency"
+                    value: _vm.form.currency,
+                    expression: "form.currency"
                   }
                 ],
                 staticClass:
@@ -4871,52 +4995,47 @@ var render = function() {
                   type: "text",
                   placeholder: "Currency"
                 },
-                domProps: { value: _vm.shop.currency },
+                domProps: { value: _vm.form.currency },
                 on: {
                   input: function($event) {
                     if ($event.target.composing) {
                       return
                     }
-                    _vm.$set(_vm.shop, "currency", $event.target.value)
+                    _vm.$set(_vm.form, "currency", $event.target.value)
                   }
                 }
               }),
               _vm._v(" "),
-              _vm.errors.currency
+              _vm.form.errors.has("currency")
                 ? _c("span", {
                     staticClass:
                       "bg-red-lightest border border-red-light text-red-dark px-2 py-1 rounded relative",
                     attrs: { role: "alert" },
-                    domProps: { textContent: _vm._s(_vm.errors.currency[0]) }
+                    domProps: {
+                      textContent: _vm._s(_vm.form.errors.get("currency"))
+                    }
                   })
                 : _vm._e()
             ]),
             _vm._v(" "),
-            _vm._m(0)
+            _c("div", { staticClass: "mb-4" }, [
+              _c(
+                "button",
+                {
+                  staticClass:
+                    "bg-purple hover:bg-purple-dark text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline",
+                  attrs: { type: "submit", disabled: _vm.form.errors.any() }
+                },
+                [_vm._v("\n            Submit\n          ")]
+              )
+            ])
           ]
         )
       ])
     ]
   )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "mb-4" }, [
-      _c(
-        "button",
-        {
-          staticClass:
-            "bg-purple hover:bg-purple-dark text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline",
-          attrs: { type: "submit" }
-        },
-        [_vm._v("\n            Submit\n          ")]
-      )
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -19890,6 +20009,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _utilities_Form__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./utilities/Form */ "./resources/js/utilities/Form.js");
+
 
 
 
@@ -19903,6 +20024,7 @@ window.axios = axios__WEBPACK_IMPORTED_MODULE_2___default.a;
  */
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+window.Form = _utilities_Form__WEBPACK_IMPORTED_MODULE_3__["default"];
 /**
  * Next we will register the CSRF Token as a common header with Axios so that
  * all outgoing HTTP requests automatically have it attached. This is just
@@ -19989,6 +20111,267 @@ var routes = [{
   routes: routes,
   linkActiveClass: 'border-l-4 border-transparent lg:bg-grey-lighter lg:hover:bg-grey-lighter lg:border-purple lg:hover:border-purple'
 }));
+
+/***/ }),
+
+/***/ "./resources/js/utilities/Errors.js":
+/*!******************************************!*\
+  !*** ./resources/js/utilities/Errors.js ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var Errors =
+/*#__PURE__*/
+function () {
+  /**
+   * Create a new Errors instance.
+   */
+  function Errors() {
+    _classCallCheck(this, Errors);
+
+    this.errors = {};
+  }
+  /**
+   * Determine if an errors exists for the given field.
+   *
+   * @param {string} field
+   */
+
+
+  _createClass(Errors, [{
+    key: "has",
+    value: function has(field) {
+      return this.errors.hasOwnProperty(field);
+    }
+    /**
+     * Determine if we have any errors.
+     */
+
+  }, {
+    key: "any",
+    value: function any() {
+      return Object.keys(this.errors).length > 0;
+    }
+    /**
+     * Retrieve the error message for a field.
+     *
+     * @param {string} field
+     */
+
+  }, {
+    key: "get",
+    value: function get(field) {
+      if (this.errors[field]) {
+        return this.errors[field][0];
+      }
+    }
+    /**
+     * Record the new errors.
+     *
+     * @param {object} errors
+     */
+
+  }, {
+    key: "record",
+    value: function record(errors) {
+      this.errors = errors;
+    }
+    /**
+     * Clear one or all error fields.
+     *
+     * @param {string|null} field
+     */
+
+  }, {
+    key: "clear",
+    value: function clear(field) {
+      if (field) {
+        delete this.errors[field];
+        return;
+      }
+
+      this.errors = {};
+    }
+  }]);
+
+  return Errors;
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (Errors);
+
+/***/ }),
+
+/***/ "./resources/js/utilities/Form.js":
+/*!****************************************!*\
+  !*** ./resources/js/utilities/Form.js ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Errors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Errors */ "./resources/js/utilities/Errors.js");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+
+
+var Form =
+/*#__PURE__*/
+function () {
+  /**
+   * Create a new Form instance.
+   *
+   * @param {object} data
+   */
+  function Form(data) {
+    _classCallCheck(this, Form);
+
+    this.originalData = data;
+
+    for (var field in data) {
+      this[field] = data[field];
+    }
+
+    this.errors = new _Errors__WEBPACK_IMPORTED_MODULE_0__["default"]();
+  }
+  /**
+   * Fetch all relevant data for the form.
+   */
+
+
+  _createClass(Form, [{
+    key: "data",
+    value: function data() {
+      var data = {};
+
+      for (var property in this.originalData) {
+        data[property] = this[property];
+      }
+
+      return data;
+    }
+    /**
+     * Reset the form fields.
+     */
+
+  }, {
+    key: "reset",
+    value: function reset() {
+      for (var field in this.originalData) {
+        this[field] = '';
+      }
+
+      this.errors.clear();
+    }
+    /**
+     * Send a POST request to the given URL.
+     * .
+     * @param {string} url
+     */
+
+  }, {
+    key: "post",
+    value: function post(url) {
+      return this.submit('post', url);
+    }
+    /**
+     * Send a PUT request to the given URL.
+     * .
+     * @param {string} url
+     */
+
+  }, {
+    key: "put",
+    value: function put(url) {
+      return this.submit('put', url);
+    }
+    /**
+     * Send a PATCH request to the given URL.
+     * .
+     * @param {string} url
+     */
+
+  }, {
+    key: "patch",
+    value: function patch(url) {
+      return this.submit('patch', url);
+    }
+    /**
+     * Send a DELETE request to the given URL.
+     * .
+     * @param {string} url
+     */
+
+  }, {
+    key: "delete",
+    value: function _delete(url) {
+      return this.submit('delete', url);
+    }
+    /**
+     * Submit the form.
+     *
+     * @param {string} requestType
+     * @param {string} url
+     */
+
+  }, {
+    key: "submit",
+    value: function submit(requestType, url) {
+      var _this = this;
+
+      return new Promise(function (resolve, reject) {
+        axios[requestType](url, _this.data()).then(function (response) {
+          _this.onSuccess(response.data);
+
+          resolve(response.data);
+        })["catch"](function (error) {
+          _this.onFail(error.response.data);
+
+          reject(error.response.data);
+        });
+      });
+    }
+    /**
+     * Handle a successful form submission.
+     *
+     * @param {object} data
+     */
+
+  }, {
+    key: "onSuccess",
+    value: function onSuccess(data) {
+      this.reset();
+    }
+    /**
+     * Handle a failed form submission.
+     *
+     * @param {object} errors
+     */
+
+  }, {
+    key: "onFail",
+    value: function onFail(errors) {
+      this.errors.record(errors);
+    }
+  }]);
+
+  return Form;
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (Form);
 
 /***/ }),
 
